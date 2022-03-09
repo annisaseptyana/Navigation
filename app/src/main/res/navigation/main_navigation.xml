@@ -34,7 +34,12 @@
         android:id="@+id/profileActivity"
         android:name="com.bangkit.navigation.ProfileActivity"
         android:label="activity_profile"
-        tools:layout="@layout/activity_profile" />
+        tools:layout="@layout/activity_profile">
+        <!--        Added DeepLink-->
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://www.bangkit.com/profile" />
+    </activity>
     
     <fragment
         android:id="@+id/detailCategoryFragment"

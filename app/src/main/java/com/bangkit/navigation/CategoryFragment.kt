@@ -36,7 +36,7 @@ class CategoryFragment : Fragment() {
             bundle.putLong(EXTRA_STOCK, 7)
             view.findNavController().navigate(R.id.action_categoryFragment_to_detailCategoryFragment, bundle)
             */
-            // Mengirim data dengan SafeArg
+            // Mengirim data dengan SafeArg -> lebih aman
             val toDetailCategoryFragment =
                 CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
             toDetailCategoryFragment.name = "Lifestyle"
