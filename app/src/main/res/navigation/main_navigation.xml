@@ -6,6 +6,7 @@
     app:startDestination="@id/homeFragment">
 
 <!--    Step 1: Menambahkan startDestination-->
+<!--    Home Fragment-->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.bangkit.navigation.HomeFragment"
@@ -20,6 +21,7 @@
             app:destination="@id/profileActivity" />
     </fragment>
 <!--    Step 3: Destinations added-->
+<!--    Category Fragment-->
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.bangkit.navigation.CategoryFragment"
@@ -41,6 +43,7 @@
             app:uri="https://www.bangkit.com/profile" />
     </activity>
 
+<!--    Detail Category Fragment-->
     <fragment
         android:id="@+id/detailCategoryFragment"
         android:name="com.bangkit.navigation.DetailCategoryFragment"
@@ -58,5 +61,10 @@
         <deepLink
             android:id="@+id/deepLink2"
             app:uri="https://www.bangkit.com/detail{name}" />
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
